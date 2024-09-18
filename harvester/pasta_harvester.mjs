@@ -8,7 +8,7 @@ import parser from 'xml2js';
 
 const PASTA_CONFIG = {
    "server": "https://pasta-s.lternet.edu/package/search/eml?", // PASTA server
-   "filter": '&fq=keyword:"Archbold Biological Station"', // Filter results on a unique keyword of a research group
+   "filter": '&fq=scope:cos-spu', // Filter results on a unique keyword of a research group
    "limit": 2000, // Max number of results to retrieve per page
    "fields": [
       "taxonomic",

@@ -2,7 +2,7 @@
 
 A customizable data catalog for users of the EDI Data Repository
 
-[Live demo](https://EDIorg.github.io/ezCatalog/public/demo.html)
+[Live demo](https://clnsmth.github.io/ezCatalog/public/demo.html)
 
 _ezCatalog is based on the [PASTA-JavaScript-Search-Client](https://github.com/BLE-LTER/PASTA-JavaScript-Search-Client) developed by Tim Whiteaker for the Long-Term Ecological Research Network (LTER)._
 
@@ -20,10 +20,10 @@ Researchers and organizations publishing data in the [EDI Repository](https://po
    - **Data Package Identifiers** - A list of data package identifiers in the form _id:scope.identifier_. For example, `'&q=id:edi.23+id:edi.101+id:edi.845'`returns the newest versions of data packages: `edi.23`, `edi.101`, and `edi.845`.
    - **Scope** - For LTER only. The scope identifying your LTER site. For example, `'&fq=scope:knb-lter-cap'` returns all data of the Central Arizona-Phoenix LTER. 
 5. Add the filter query to `config.txt` and commit the changes.
-6. Use GitHub **Actions** to build your catalog with the [build_catalog](https://github.com/EDIorg/ezCatalog/blob/master/.github/workflows/build_catalog.yml) workflow. Go to **Actions** and under **Workflows** select **Build catalog**, then **Run workflow**. Wait for the workflow to complete, then click the **Live demo** page to see your catalog (it may take a few minutes to update). Subsequent pushes to your fork will automatically rerun the `build_catalog` workflow.  
+6. Use GitHub **Actions** to build your catalog with the [build_catalog](https://github.com/clnsmth/ezCatalog/blob/master/.github/workflows/build_catalog.yml) workflow. Go to **Actions** and under **Workflows** select **Build catalog**, then **Run workflow**. Wait for the workflow to complete, then click the **Live demo** page to see your catalog (it may take a few minutes to update). Subsequent pushes to your fork will automatically rerun the `build_catalog` workflow.  
 7. Copy the HTML snippet below and paste it into the body of your webpage. This will reference the catalog hosted on GitHub Pages from within your website.
 ```
-<iframe loading="lazy" src="https://EDIorg.github.io/ezCatalog/public/demo.html" scrolling="no" allow="fullscreen" width="100%" height="2700px"></iframe>
+<iframe loading="lazy" src="https://clnsmth.github.io/ezCatalog/public/demo.html" scrolling="no" allow="fullscreen" width="100%" height="2700px"></iframe>
 ```
 8. If you would like your catalog to reference data packages in the EDI staging environment, search for the string `pasta.lternet` and replace with `pasta-s.lternet` in the files:
    - `/harvester/pasta_harvester.mjs`
