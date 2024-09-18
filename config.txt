@@ -1,2 +1,2 @@
-filter = '&fq=keyword:"Archbold Biological Station"'
+filter = '&fq=scope:cos-spu'
 limit = 20
