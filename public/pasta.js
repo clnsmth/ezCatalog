@@ -3,7 +3,7 @@
 "use strict";
 
 var PASTA_CONFIG = {
-   "server": "https://pasta.lternet.edu/package/search/eml?", // PASTA server
+   "server": "https://pasta-s.lternet.edu/package/search/eml?", // PASTA server
    "filter": '&fq=keyword:"Archbold Biological Station"', // Filter results on a unique keyword of a research group
    "limit": 20, // Max number of results to retrieve per page
    "resultsElementId": "searchResults", // Element to contain results
