@@ -40,7 +40,7 @@ function buildHtml(citations) {
       var authors = citation["authors"];
       var date = (citation["pub_year"]) ? " Published " + citation["pub_year"] + "" : "";
       // default ESIP formatting has trailing period after DOI
-      var link = (citation["doi"]) ? citation["doi"].slice(0, -1) : "https://portal-s.edirepository.org/nis/mapbrowse?packageid=" + citation["pid"];
+      var link = "https://portal-s.edirepository.org/nis/mapbrowse?packageid=" + citation["pid"];
       var title = '<a rel="external noopener" href="' + link + '" target="_blank" aria-label="open data in new tab">' + citation["title"] + '</a>';
       var row = '<p><span class="dataset-title">' + title +
          '</span><br><span class="dataset-author">' + authors + date +
