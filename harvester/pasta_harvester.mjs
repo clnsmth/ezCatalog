@@ -43,7 +43,7 @@ function parsePeople(doc) {
 
 
 function parseProjectTitle(doc) {
-   var projectNodes = doc["projectTitle"][0];
+   var projectNodes = doc["projectTitle"];
    var projects = [];
    if (projectNodes) {
       for (var projectIndex = 0; projectIndex < projectNodes.length; projectIndex++) {
