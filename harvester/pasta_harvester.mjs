@@ -13,7 +13,8 @@ const PASTA_CONFIG = {
    "fields": [
       "taxonomic",
       "author",
-      "projectTitle"
+      "projectTitle",
+      "relatedProjectTitle"
    ]
 };
 
@@ -54,6 +55,18 @@ function parseProjectTitle(doc) {
 }
 
 
+function parseRelatedProjectTitle(doc) {
+   var projectNodes = doc["relatedProjectTitle"];
+   var projects = [];
+   if (projectNodes) {
+      for (var projectIndex = 0; projectIndex < projectNodes.length; projectIndex++) {
+         projects.push(projectNodes[projectIndex]);
+      }
+   }
+   return projects;
+}
+
+
 function parseAbstract(doc) {
    return doc["abstract"] ? doc["abstract"][0] : "";
 }
@@ -78,6 +91,8 @@ function fetchChunk(uri) {
                      chunk["author"] = chunk["author"].concat(parsePeople(doc));
                   if (PASTA_CONFIG["fields"].indexOf("projectTitle") > -1)
                      chunk["projectTitle"] = chunk["projectTitle"].concat(parseProjectTitle(doc));
+                  if (PASTA_CONFIG["fields"].indexOf("relatedProjectTitle") > -1)
+                     chunk["relatedProjectTitle"] = chunk["relatedProjectTitle"].concat(parseRelatedProjectTitle(doc));
                   if (PASTA_CONFIG["fields"].indexOf("abstract") > -1)
                      chunk["abstract"].push(parseAbstract(doc));
                }
