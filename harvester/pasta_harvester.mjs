@@ -12,7 +12,7 @@ const PASTA_CONFIG = {
    "limit": 2000, // Max number of results to retrieve per page
    "fields": [
       "taxonomic",
-      "author"
+      "author",
       "projectTitle"
    ]
 };
